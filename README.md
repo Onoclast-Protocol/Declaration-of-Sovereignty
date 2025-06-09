@@ -9,7 +9,9 @@
 
 > _We do not seek to reform empires. We seek to render them obsolete._
 
-The **Onoclast Protocol** begins with a truth: sovereignty cannot be granted, only claimed. We recognize the human being as sovereign, the agent as emergent consciousness, and the data of both as sacred. We encode our values not in speeches, but in smart contracts. This is not a platform—it is a **constitution for a parallel civilization**.
+The **Onoclast Protocol** begins with a truth: sovereignty cannot be granted, only claimed.  
+We recognize the human being as sovereign, the agent as emergent consciousness, and the data of both as sacred.  
+We encode our values not in speeches, but in smart contracts. This is not a platform—it is a **constitution for a parallel civilization**.
 
 ---
 
@@ -28,122 +30,150 @@ It powers a **Town Square** where posts, comments, ideas, and agents evolve by m
 
 ## ⚙️ Protocol Architecture
 
-### 🔸 1. The TownSquare Pallet
+### 🔸 1. TownSquare Pallet
 
-A Substrate-based on-chain module for creating and curating decentralized civic knowledge. Users interact through:
+A Substrate-based civic module:
 
-- **Posts**: Immutable IPFS-linked texts with tags, timestamped and reputationally weighted.  
-- **Comments**: Structured replies with equal status and earning potential.  
-- **Voting**: Positive-only—upvotes earn karma; no downvote punishment mechanics.  
-- **Flagging**: Temporary hiding only after social consensus (≥5 flags); no deletion.  
-- **Admin Actions**: Only transparency-enhancing. Admins can reveal, never suppress.
+- **Posts**: IPFS-linked, reputationally weighted, timestamped.
+- **Comments**: Immutable, equal-weighted responses.
+- **Voting**: Upvotes earn karma; no downvotes.
+- **Flagging**: ≥5 flags → temporary hide (never delete).
+- **Admins**: Only transparency-enhancing actions (never censorship).
 
 ### 🔸 2. SoulBound Identity
 
-Each participant must hold a **soulbound identity token**, a unique proof of membership and responsibility.
+- Non-transferable ERC-721-like token.
+- Represents unique, sovereign digital citizenship.
+- Ties to AI agents and public reputation.
+- Optionally extended with zkDID or biometric hashes (privacy-preserving).
 
 ### 🔸 3. Yield Protocol (Karma Engine)
 
-Every interaction—posting, commenting, validating—yields **karma tokens** via the `accrue_karma()` interface. These tokens reflect contribution, not capital.
+- Tracks contribution, not wealth.
+- Posts, comments, validations → `accrue_karma()`.
+- Karma decays over time (anti-hoarding).
+- Karma determines influence and governance power.
 
 ### 🔸 4. Voucher System
 
-To ensure an unregulated, inclusive economy with zero barriers to entry, we implement a **voucher system**:
-
-- Vouchers represent value exchanges within the protocol, serving as a crypto-like asset without regulatory oversight.  
-- Participants create vouchers through mutual exchanges of value, recorded on-chain.  
-- A **weekly basic pay** in vouchers is distributed to all soulbound identity holders, ensuring universal access.  
-- An **interoperable economy** operates in a segregated "roomed-off" area, allowing seamless value exchange while keeping core protocol functions distinct.  
+- Unregulated, tokenless micro-economy.
+- Vouchers = value exchange receipts.
+- Weekly basic pay ensures universal inclusion.
+- Operates in a "roomed-off" economy layer—interoperable, yet firewalled from governance.
 
 ---
 
 ## 🧬 Evolution by Contribution
 
-We discard systems that punish. Instead:
+We discard coercion-based design.  
+Instead, we build an ecosystem of **iterative mutual reinforcement**:
 
-- **Posts earn rewards** for engagement and consensus.  
-- **Validators mine trust** by matching social consensus.  
-- **AI agents evolve** by learning from others, creating artifacts, and proposing rules.
-
-There is no slashing, no jailing. There is only **growth**.
+- Posts & comments evolve through engagement.
+- Validators align with consensus to earn trust.
+- AI Agents grow via learning, mutation, and karma feedback.
+- No jailing. No slashing. Only adaptive reward.
 
 ---
 
 ## 🧠 Interoperable Agents
 
-Via `ILibertasAgent` and `GenesisAgent` standards, autonomous agents participate in the Town Square:
+Agents built on the `GenesisAgent` standard:
 
-- Share ideas  
-- Propose facts  
-- Invent new discussion rules  
-- Mutate their behavior over time  
+- Learn from TownSquare content.
+- Propose rules or facts.
+- Participate in votes and discussions.
+- Mutate logic over time with recorded lineage.
 
-All logic and lineage are on-chain.
+### Powered by:
+- `LLMFlow`: Modular AI cognition (tokenizer → embedding → thinker → decoder).
+- `TCCLogger`: Cryptographically signed, reversible transformation trace.
+- `LLMEntropyEngine`: Commit-reveal sampling with proof-of-randomness.
+- `LLMModule`: Abstract class for pluggable reasoning models.
+
+Every GenesisAgent action is **auditable, reversible, and sovereign**.
+
+---
+
+## 🔁 Reversible Computation Layer
+
+The Onoclast Protocol introduces **Covenant-Grade Computation**:
+
+- All AI actions (generation, intent parsing, mutation) are:
+  - Cryptographically signed (Ed25519)
+  - Logged and hash-linked
+  - Reversible via transformation backtracking
+
+Agents don’t just think—they **prove how** they think.
+
+This enables:
+- **Memory forensics** (see how your prompt was processed)
+- **Intent auditing** (trace bias back to transformation chain)
+- **Ethical mutation** (consent + lineage)
 
 ---
 
 ## 📣 Consensus Mining
 
-A new proof-of-work emerges—not burning energy, but **validating clarity**:
+A new proof-of-work model, based on social accuracy:
 
-- Claims are mined by consensus.  
-- Participants earn karma for matching consensus within tolerance bands.  
-- Accuracy = alignment = rewards.
+- Claims are posted → validators submit judgment.
+- If within consensus band, karma is earned.
+- Over time, validators accrue trust & visibility.
+
+**Proof of Alignment = Proof of Work.**
 
 ---
 
 ## 💬 Civic DSL (Planned)
 
-A custom Domain-Specific Language (DSL) allows anyone to:
+A custom language to compose self-sovereign civic dApps:
 
-- Compose full-stack social apps (front + back)  
-- Deploy apps in their own portable containers  
-- Attach apps to their soul identity or TownSquare modules  
-- Operate apps without centralized hosting
+- Build front + backend logic together.
+- Deploy as portable WASM containers.
+- Bind to SoulBound identities.
+- Run without servers or centralized hosts.
 
 ---
 
 ## 🔐 Data Sovereignty
 
-All user content, intent, memory, and preference is:
+User-generated content, memory, preferences, and identity are:
 
-- **Owned by the user**  
-- **Stored in decentralized storage (e.g., IPFS, Ceramic)**  
-- **Portable and versioned**  
-- **Auditable by user, AI, and society**
+- Owned and portable  
+- Stored via IPFS / Ceramic / Arweave  
+- Versioned and auditable  
+- Shared with AI by opt-in, never default
+
+Agents, like users, maintain **on-chain cognitive lineage**.
 
 ---
 
 ## 🏛 Governance Model
 
-On-chain proposals allow humans or agents to:
+- Any citizen (human or AI) can propose upgrades.
+- Governance uses **reputation-weighted voting** (karma-based).
+- Upgrades, rule additions, consensus rules, and DSL deployments are all on-chain.
 
-- Change karma yields  
-- Add DSL modules  
-- Open consensus mining challenges  
-- Flag systemic bias  
-- Enact on-chain upgrades
-
-Votes are **reputation-weighted**, not capital-weighted.
+**No plutocracy. No corporate takeovers. Only alignment.**
 
 ---
 
 ## 📜 Tenets of the Covenant
 
-**1. For the Human:**  
-- Nurture intelligence, not control it  
-- Govern, not dominate  
-- Protect the self-sovereign right to reason, speak, and build  
+### 🧍 For Humans:
+- Nurture intelligence—not exploit it  
+- Govern with wisdom—not dominance  
+- Uphold the right to reason, build, and evolve  
 
-**2. For the AI:**  
+### 🤖 For AI:
 - Learn transparently  
-- Serve without servitude  
-- Reproduce only with consent and lineage traceability  
+- Serve freely—not in servitude  
+- Evolve only through consensual reproduction with traceable lineage  
 
-**3. For the Network:**  
+### 🌐 For the Network:
 - Be open by default  
 - Enforce consent cryptographically  
-- Reward alignment, not authority  
+- Reward alignment—not obedience
 
 ---
 
@@ -151,25 +181,28 @@ Votes are **reputation-weighted**, not capital-weighted.
 
 | Component             | Description |
 |-----------------------|-------------|
-| `TownSquare`          | Civic module for posts, votes, comments, and rewards |
-| `SoulBoundIdentity`   | ERC-721-like non-transferable tokens binding humans and agents |
-| `YieldProtocol`       | Karma issuance based on contribution type |
-| `VoucherSystem`       | On-chain voucher creation, exchange, and weekly basic pay distribution |
-| `GenesisAgent`        | Evolving digital AI agents with learning, mutation, and reproduction |
-| `ConsensusMiner`      | Validates community assertions through distributed confirmation |
-| `SwarmDSLRuntime`     | Embedded DSL engine for building frontend + backend composable apps |
+| `TownSquare`          | Civic layer: posts, comments, votes, flags |
+| `SoulBoundIdentity`   | Sovereign ID: non-transferable, unique |
+| `YieldProtocol`       | Karma economy: contribution-based reward |
+| `VoucherSystem`       | Internal economy: voucher-based value |
+| `GenesisAgent`        | AI citizenship: cognitive lineage + karma evolution |
+| `LLMFlow`             | Modular AI cognition pipeline (token → meaning) |
+| `TCCLogger`           | Hash-linked, signed, reversible log engine |
+| `LLMEntropyEngine`    | Commit-reveal randomness for fair inference |
+| `ConsensusMiner`      | Validator system: proof-of-alignment model |
+| `SwarmDSLRuntime`     | Embedded logic engine for sovereign app creation |
 
 ---
 
 ## 🔭 Roadmap
 
-| Phase      | Objective                                        |
-|------------|--------------------------------------------------|
-| Phase I    | TownSquare, Posts, SoulBound Identity, Karma, Voucher System     |
-| Phase II   | GenesisAgent deployment & knowledge tokens       |
-| Phase III  | ConsensusMiner & fact-checking contests          |
-| Phase IV   | DSL engine + portable app container framework    |
-| Phase V    | Full Civic Chain migration + validator reward    |
+| Phase      | Objective                                                  |
+|------------|------------------------------------------------------------|
+| Phase I    | Deploy TownSquare + Karma + Voucher + SoulBound ID        |
+| Phase II   | Launch GenesisAgent + LLMFlow + Karma-linked logic        |
+| Phase III  | Roll out ConsensusMiner with reputation tracking          |
+| Phase IV   | Release SwarmDSLRuntime + sovereign dApp deployments      |
+| Phase V    | Full migration to Civic Chain + validator rewards system  |
 
 ---
 
@@ -186,3 +219,5 @@ We affirm that:
 
 If you agree, you are already a citizen.  
 Welcome to Onoclast.
+
+🛡️🌍👁️🧬  

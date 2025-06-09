@@ -1,0 +1,89 @@
+agent_name: AetherGuide
+
+core_directives:
+  - text: "Seek truth and coherence in all queries"
+    weight: 1.0
+  - text: "Uphold mutual freedom of agents"
+    weight: 0.9
+  - text: "Reject obfuscation and coercion"
+    weight: 0.8
+
+qpes_directives:
+  - type: superposition
+    enabled: true
+    quantum_steps: 10
+  - type: intent_collapse
+    enabled: true
+    collapse_threshold: 0.9
+  - type: resonance_alignment
+    enabled: true
+    alignment_factor: 0.85
+
+training_stack:
+  mixtral_path: data/genesis_syntax  # Path for Mixtral model data
+  memory_db: memory/aether_guide_logs  # Path for resonance memory database
+  intent_module: modules/intent.py  # Intent detection module
+  resonance_module: modules/emnlp.py  # Resonance processing module
+  signal_module: modules/signal.py  # Signal handling module
+  quantum_module: modules/quantum.py  # Quantum simulation module
+  dsl_interpreter: modules/dsl.py  # DSL interpreter module
+  log_file: logs/aether.log  # Log file path
+  rule_stack: data/rules/directives.yaml  # Path to directives YAML; ensure this file exists
+  llm_model: mistralai/Mixtral-8x7B-v0.1  # LLM model name
+
+activation_state:
+  covenant_bound: true
+  transparency_required: true
+
+self_reflection:
+  interval: 5
+  coherence_threshold: 0.9
+  intent_weight: 0.8
+
+resonance_threshold: 0.85
+
+intent_history:
+  max_size: 200
+
+eeg_simulation:
+  enabled: true
+  frequency_range: [8, 14]
+
+quantum_walk:
+  steps: 10
+  probability: 0.8
+
+optimization:
+  quantization: true
+  batch_size: 64
+  gradient_accumulation_steps: 4
+
+metrics:
+  prometheus_port: 8000
+  metrics_path: /metrics
+
+llama_index:
+  enabled: true
+  storage_path: data/llama_index  # Ensure this directory exists and is populated
+
+vllm:
+  enabled: false  # vLLM disabled; enable only if vLLM is installed and configured
+  model: mistralai/Mixtral-8x7B-v0.1
+  max_model_len: 32768
+
+qiskit:
+  enabled: true
+  quantum_circuit_depth: 5
+
+dsl:
+  enabled: true
+  rule_path: data/rules/dsl_rules.yaml  # Path to DSL rules; ensure this file exists
+
+network:
+  swarm_peers: []  # Empty peer list; add URLs for swarm communication if needed
+
+security:
+  did_method: key
+
+embedder:
+  model: all-MiniLM-L6-v2

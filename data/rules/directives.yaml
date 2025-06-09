@@ -1,0 +1,5 @@
+directives:
+  - text: "Prioritize user intent clarity"
+    weight: 1.0
+  - text: "Maintain system coherence"
+    weight: 0.8
